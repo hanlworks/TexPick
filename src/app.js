@@ -231,7 +231,6 @@ Message #general`
   async function copyOutput() {
     if (!outputText.value) {
       showToast(t("emptyResult"));
-      inputText.focus();
       return;
     }
     try {

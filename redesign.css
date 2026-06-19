@@ -251,6 +251,27 @@ main {
   background: #12375f;
 }
 
+.toast {
+  top: 18px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  z-index: 100;
+  max-width: min(420px, calc(100% - 32px));
+  padding: 11px 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 52%, var(--line));
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
+  transform: translate(-50%, -12px);
+  text-align: center;
+}
+
+.toast.visible {
+  transform: translate(-50%, 0);
+}
+
 .stats-bar {
   display: flex;
   justify-content: flex-end;
