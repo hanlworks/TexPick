@@ -240,8 +240,7 @@ main {
   border-top-color: var(--line-soft);
 }
 
-#copyButton,
-#copyButton:disabled {
+#copyButton {
   border-color: #1b4572;
   background: #1b4572;
   color: #fff;
@@ -250,10 +249,6 @@ main {
 #copyButton:hover:not(:disabled) {
   border-color: #12375f;
   background: #12375f;
-}
-
-#copyButton:disabled {
-  opacity: .58;
 }
 
 .stats-bar {

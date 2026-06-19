@@ -65,6 +65,7 @@
       footerText: "Your conversations stay yours.",
       privacyLink: "개인정보 안내",
       copied: "결과를 복사했어요.",
+      emptyResult: "먼저 채팅을 붙여 넣어 주세요.",
       downloaded: "TXT 파일을 저장했어요.",
       sampleLoaded: "예시를 불러왔어요.",
       settingsReset: "정리 규칙을 초기화했어요.",
@@ -119,6 +120,7 @@
       footerText: "Your conversations stay yours.",
       privacyLink: "Privacy",
       copied: "Result copied.",
+      emptyResult: "Paste a conversation first.",
       downloaded: "TXT file downloaded.",
       sampleLoaded: "Sample loaded.",
       settingsReset: "Cleaning rules reset.",
@@ -195,7 +197,6 @@ Message #general`
     $("#removedCount").textContent = result.stats.removedLines.toLocaleString();
     $("#messageCount").textContent = result.stats.messageLines.toLocaleString();
     $("#reductionRate").textContent = `${result.stats.reductionRate}%`;
-    copyButton.disabled = !result.output;
     downloadButton.disabled = !result.output;
   }
 
@@ -228,7 +229,11 @@ Message #general`
   }
 
   async function copyOutput() {
-    if (!outputText.value) return;
+    if (!outputText.value) {
+      showToast(t("emptyResult"));
+      inputText.focus();
+      return;
+    }
     try {
       await navigator.clipboard.writeText(outputText.value);
     } catch {
