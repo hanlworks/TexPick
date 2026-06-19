@@ -4,7 +4,7 @@
 
 복사한 채팅에서 닉네임, 시간, 반응 메뉴 같은 부가 정보를 제거하고 메시지 본문만 추출하는 개인정보 보호형 웹 도구입니다.
 
-[실행 중인 서비스](https://chatextractor.chattools.workers.dev) · [영문 README](../README.md)
+[실행 중인 서비스](https://texpick.chattools.workers.dev) · [영문 README](../README.md)
 
 ![TexPick 화면](screenshot.png)
 

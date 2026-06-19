@@ -4,7 +4,7 @@
 
 Remove usernames, timestamps, reactions, and interface labels from copied chats—without uploading private conversations.
 
-[한국어 문서](docs/README.ko.md) · [Live demo](https://chatextractor.chattools.workers.dev)
+[한국어 문서](docs/README.ko.md) · [Live demo](https://texpick.chattools.workers.dev)
 
 ![TexPick interface](docs/screenshot.png)
 
