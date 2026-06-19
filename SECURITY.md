@@ -17,4 +17,4 @@ For security-sensitive reports, contact the project maintainer privately through
 
 ## Data handling
 
-ChatExtractor is designed to process text locally in the browser. A change that introduces network transmission, analytics, remote storage, or third-party scripts must be disclosed prominently and reviewed as a security-sensitive change.
+TexPick is designed to process text locally in the browser. A change that introduces network transmission, analytics, remote storage, or third-party scripts must be disclosed prominently and reviewed as a security-sensitive change.

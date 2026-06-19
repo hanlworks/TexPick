@@ -152,7 +152,9 @@ More
 Message #general`
   };
 
-  let language = localStorage.getItem("chatExtractorLanguage") || "ko";
+  let language = localStorage.getItem("texPickLanguage")
+    || localStorage.getItem("chatExtractorLanguage")
+    || "ko";
   let toastTimer;
 
   function t(key) {
@@ -174,7 +176,7 @@ Message #general`
   }
 
   function render() {
-    const result = ChatExtractor.extractMessages(inputText.value, getOptions());
+    const result = TexPick.extractMessages(inputText.value, getOptions());
     outputText.value = result.output;
     $("#inputCount").textContent = `${result.stats.inputCharacters.toLocaleString()}${t("characters")}`;
     $("#outputCount").textContent = `${result.stats.outputCharacters.toLocaleString()}${t("characters")}`;
@@ -195,8 +197,8 @@ Message #general`
     });
     $("#languageButton").textContent = language === "ko" ? "EN" : "한국어";
     document.title = language === "ko"
-      ? "ChatExtractor — 채팅 본문 추출기"
-      : "ChatExtractor — Extract clean messages from chats";
+      ? "TexPick — 채팅 본문 추출기"
+      : "TexPick — Extract clean messages from chats";
     render();
   }
 
@@ -220,7 +222,7 @@ Message #general`
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `chat-extract-${new Date().toISOString().slice(0, 10)}.txt`;
+    anchor.download = `texpick-${new Date().toISOString().slice(0, 10)}.txt`;
     anchor.click();
     URL.revokeObjectURL(url);
     showToast(t("downloaded"));
@@ -251,16 +253,17 @@ Message #general`
   $("#resetSettingsButton").addEventListener("click", resetSettings);
   $("#languageButton").addEventListener("click", () => {
     language = language === "ko" ? "en" : "ko";
-    localStorage.setItem("chatExtractorLanguage", language);
+    localStorage.setItem("texPickLanguage", language);
     applyLanguage();
   });
   $("#themeButton").addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem("chatExtractorTheme", nextTheme);
+    localStorage.setItem("texPickTheme", nextTheme);
   });
 
-  const savedTheme = localStorage.getItem("chatExtractorTheme");
+  const savedTheme = localStorage.getItem("texPickTheme")
+    || localStorage.getItem("chatExtractorTheme");
   if (savedTheme) document.documentElement.dataset.theme = savedTheme;
   $("#year").textContent = new Date().getFullYear();
   applyLanguage();

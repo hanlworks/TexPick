@@ -194,5 +194,5 @@
     module.exports = api;
   }
 
-  globalScope.ChatExtractor = api;
+  globalScope.TexPick = api;
 })(typeof globalThis !== "undefined" ? globalThis : window);

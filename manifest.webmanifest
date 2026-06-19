@@ -1,6 +1,6 @@
 {
-  "name": "ChatExtractor",
-  "short_name": "ChatExtractor",
+  "name": "TexPick",
+  "short_name": "TexPick",
   "description": "Extract clean message text from copied chats without uploading private conversations.",
   "start_url": "./",
   "display": "standalone",

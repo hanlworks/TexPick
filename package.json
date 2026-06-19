@@ -1,5 +1,5 @@
 {
-  "name": "chat-extractor",
+  "name": "texpick",
   "version": "1.0.0",
   "private": true,
   "description": "Extract clean message text from copied chats without uploading private conversations.",
@@ -16,11 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hanlworks/ChatExtractor.git"
+    "url": "https://github.com/hanlworks/TexPick.git"
   },
   "homepage": "https://chatextractor.chattools.workers.dev",
   "bugs": {
-    "url": "https://github.com/hanlworks/ChatExtractor/issues"
+    "url": "https://github.com/hanlworks/TexPick/issues"
   },
   "license": "MIT"
 }

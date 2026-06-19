@@ -1,6 +1,6 @@
 # Roadmap
 
-ChatExtractor will grow carefully: parser coverage should improve without increasing the risk of deleting real message text.
+TexPick will grow carefully: parser coverage should improve without increasing the risk of deleting real message text.
 
 ## Near term
 

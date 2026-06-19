@@ -2,7 +2,7 @@
 
 Last updated: June 19, 2026
 
-ChatExtractor is designed to process pasted text entirely on the user's device.
+TexPick is designed to process pasted text entirely on the user's device.
 
 ## Data collection
 
@@ -23,7 +23,7 @@ The application stores only interface preferences, such as language and light or
 
 ## Hosting
 
-The hosted website provider may process standard network information such as IP addresses and request logs under its own policies. The ChatExtractor application does not add chat text to requests.
+The hosted website provider may process standard network information such as IP addresses and request logs under its own policies. The TexPick application does not add chat text to requests.
 
 ## Changes
 

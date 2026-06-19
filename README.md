@@ -1,16 +1,18 @@
-# ChatExtractor
+# TexPick
 
-> Remove usernames, timestamps, reactions, and interface labels from copied chats—without uploading private conversations.
+> Pick the text. Leave the clutter.
+
+Remove usernames, timestamps, reactions, and interface labels from copied chats—without uploading private conversations.
 
 [한국어 문서](docs/README.ko.md) · [Live demo](https://chatextractor.chattools.workers.dev)
 
-![ChatExtractor interface](docs/screenshot.png)
+![TexPick interface](docs/screenshot.png)
 
-## Why ChatExtractor?
+## Why TexPick?
 
 Copying a conversation from a chat app often includes metadata that is useful inside the app but noisy everywhere else: usernames, timestamps, reaction controls, reply buttons, and channel prompts.
 
-ChatExtractor turns that copied block into clean message text. All processing happens locally in the browser. No account, server, database, or upload is involved.
+TexPick turns that copied block into clean message text. All processing happens locally in the browser. No account, server, database, or upload is involved.
 
 ## Features
 
@@ -26,7 +28,7 @@ ChatExtractor turns that copied block into clean message text. All processing ha
 
 ## Privacy
 
-ChatExtractor does not send pasted content to a server. The extraction engine runs entirely in the user's browser.
+TexPick does not send pasted content to a server. The extraction engine runs entirely in the user's browser.
 
 - No analytics
 - No cookies
@@ -91,7 +93,7 @@ See [ROADMAP.md](ROADMAP.md) for planned platform support and product improvemen
 
 ## Trademark notice
 
-ChatExtractor is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Discord Inc. Discord is a trademark of Discord Inc.
+TexPick is an independent open-source project. It is not affiliated with, endorsed by, or sponsored by Discord Inc. Discord is a trademark of Discord Inc.
 
 ## License
 

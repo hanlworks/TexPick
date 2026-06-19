@@ -1,4 +1,4 @@
-# Contributing to ChatExtractor
+# Contributing to TexPick
 
 Thanks for helping make copied chats easier to clean.
 
