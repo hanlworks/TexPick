@@ -1,0 +1,17 @@
+{
+  "name": "ChatExtractor",
+  "short_name": "ChatExtractor",
+  "description": "Extract clean message text from copied chats without uploading private conversations.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

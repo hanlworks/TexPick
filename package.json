@@ -1,0 +1,26 @@
+{
+  "name": "chat-extractor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extract clean message text from copied chats without uploading private conversations.",
+  "scripts": {
+    "test": "node --test",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "chat",
+    "discord",
+    "text-extraction",
+    "privacy",
+    "open-source"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanlworks/ChatExtractor.git"
+  },
+  "homepage": "https://chatextractor.chattools.workers.dev",
+  "bugs": {
+    "url": "https://github.com/hanlworks/ChatExtractor/issues"
+  },
+  "license": "MIT"
+}

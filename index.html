@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="채팅에서 닉네임, 시간, 반응 메뉴를 제거하고 메시지 본문만 추출하세요. 모든 처리는 브라우저 안에서 이루어집니다.">
+  <meta name="theme-color" content="#0d1117">
+  <meta property="og:title" content="ChatExtractor">
+  <meta property="og:description" content="채팅의 군더더기는 지우고 메시지만 남기세요. 모든 처리는 브라우저 안에서 이루어집니다.">
+  <meta property="og:type" content="website">
+  <title>ChatExtractor — 채팅 본문 추출기</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">본문으로 이동</a>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ChatExtractor 홈">
+      <img src="assets/logo.svg" alt="" width="34" height="34">
+      <span>ChatExtractor</span>
+    </a>
+    <nav class="top-actions" aria-label="페이지 설정">
+      <button class="icon-button" id="themeButton" type="button" aria-label="테마 변경" title="테마 변경">
+        <span aria-hidden="true">◐</span>
+      </button>
+      <button class="language-button" id="languageButton" type="button" aria-label="언어 변경">EN</button>
+      <a class="github-link" href="https://github.com/hanlworks/ChatExtractor" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Private by design · No uploads</p>
+        <h1 data-i18n="heroTitle">채팅의 군더더기는 지우고<br>메시지만 남기세요.</h1>
+        <p class="hero-description" data-i18n="heroDescription">
+          복사한 채팅에서 닉네임, 날짜, 이모티콘 반응, 메뉴 문구를 자동으로 제거합니다.
+          입력 내용은 서버로 전송되지 않습니다.
+        </p>
+      </div>
+      <div class="privacy-card" role="note">
+        <span class="privacy-icon" aria-hidden="true">✓</span>
+        <div>
+          <strong data-i18n="privacyTitle">브라우저 안에서만 처리</strong>
+          <p data-i18n="privacyBody">붙여 넣은 내용은 기기 밖으로 나가지 않으며 저장되지 않습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-shell" id="workspace" aria-label="채팅 본문 추출 도구">
+      <aside class="settings-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label" data-i18n="cleaningRules">정리 규칙</p>
+            <h2 data-i18n="settingsTitle">무엇을 지울까요?</h2>
+          </div>
+          <button class="text-button" id="resetSettingsButton" type="button" data-i18n="reset">초기화</button>
+        </div>
+
+        <div class="setting-list">
+          <label class="setting-row">
+            <span>
+              <strong data-i18n="removeHeaders">닉네임과 시간</strong>
+              <small data-i18n="removeHeadersHelp">작성자, 날짜, 타임스탬프</small>
+            </span>
+            <input id="removeHeaders" type="checkbox" checked>
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong data-i18n="removeUi">메뉴와 안내 문구</strong>
+              <small data-i18n="removeUiHelp">답장, 수정, 반응 추가하기 등</small>
+            </span>
+            <input id="removeUi" type="checkbox" checked>
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong data-i18n="removeEmoji">이모티콘과 반응</strong>
+              <small data-i18n="removeEmojiHelp">유니코드 및 :emoji: 코드</small>
+            </span>
+            <input id="removeEmoji" type="checkbox" checked>
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong data-i18n="removeMentions">멘션</strong>
+              <small data-i18n="removeMentionsHelp">@사용자, 역할, 채널 멘션</small>
+            </span>
+            <input id="removeMentions" type="checkbox" checked>
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong data-i18n="normalizeSpacing">공백 정리</strong>
+              <small data-i18n="normalizeSpacingHelp">중복 빈 줄과 줄 끝 공백</small>
+            </span>
+            <input id="normalizeSpacing" type="checkbox" checked>
+          </label>
+        </div>
+
+        <details class="custom-rules">
+          <summary data-i18n="customRules">사용자 지정 제거 문구</summary>
+          <p data-i18n="customRulesHelp">한 줄에 하나씩 입력하세요. 정확히 일치하는 줄을 제거합니다.</p>
+          <textarea id="customRulesInput" rows="5" data-i18n-placeholder="customRulesPlaceholder" placeholder="예:&#10;읽지 않은 메시지&#10;스레드 보기"></textarea>
+        </details>
+      </aside>
+
+      <div class="editor-area">
+        <div class="editor-toolbar">
+          <div class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="autoStatus">붙여 넣으면 자동으로 정리됩니다</span>
+          </div>
+          <button class="secondary-button" id="sampleButton" type="button" data-i18n="trySample">예시 사용</button>
+        </div>
+
+        <div class="editor-grid">
+          <section class="editor-card">
+            <div class="editor-header">
+              <div>
+                <span class="step-number">1</span>
+                <strong data-i18n="inputTitle">채팅 붙여 넣기</strong>
+              </div>
+              <div class="editor-actions">
+                <span class="character-count" id="inputCount">0자</span>
+                <button class="text-button" id="clearButton" type="button" data-i18n="clear">비우기</button>
+              </div>
+            </div>
+            <textarea id="inputText" spellcheck="false" data-i18n-placeholder="inputPlaceholder" placeholder="디스코드나 채팅 앱에서 복사한 내용을 여기에 붙여 넣으세요."></textarea>
+          </section>
+
+          <section class="editor-card result-card">
+            <div class="editor-header">
+              <div>
+                <span class="step-number">2</span>
+                <strong data-i18n="outputTitle">추출된 메시지</strong>
+              </div>
+              <span class="character-count" id="outputCount">0자</span>
+            </div>
+            <textarea id="outputText" readonly spellcheck="false" data-i18n-placeholder="outputPlaceholder" placeholder="정리된 메시지가 여기에 표시됩니다."></textarea>
+            <div class="result-actions">
+              <button class="secondary-button" id="downloadButton" type="button" disabled data-i18n="download">TXT 다운로드</button>
+              <button class="primary-button" id="copyButton" type="button" disabled>
+                <span data-i18n="copy">결과 복사</span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <div class="stats-bar" aria-live="polite">
+          <div>
+            <strong id="removedCount">0</strong>
+            <span data-i18n="removedLines">개 불필요한 줄 제거</span>
+          </div>
+          <div>
+            <strong id="messageCount">0</strong>
+            <span data-i18n="messageLines">개 메시지 줄 보존</span>
+          </div>
+          <div>
+            <strong id="reductionRate">0%</strong>
+            <span data-i18n="reduction">내용 감소</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article>
+        <span aria-hidden="true">⚡</span>
+        <h2 data-i18n="featureFastTitle">즉시 처리</h2>
+        <p data-i18n="featureFastBody">설치나 로그인 없이 붙여 넣는 즉시 결과를 확인할 수 있습니다.</p>
+      </article>
+      <article>
+        <span aria-hidden="true">◎</span>
+        <h2 data-i18n="featureFlexibleTitle">유연한 규칙</h2>
+        <p data-i18n="featureFlexibleBody">기본 규칙을 켜고 끄거나 직접 제거할 문구를 추가할 수 있습니다.</p>
+      </article>
+      <article>
+        <span aria-hidden="true">◈</span>
+        <h2 data-i18n="featureOpenTitle">오픈소스</h2>
+        <p data-i18n="featureOpenBody">작동 방식을 누구나 확인하고 새로운 채팅 형식을 함께 지원할 수 있습니다.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>ChatExtractor <span id="year"></span> · <span data-i18n="footerText">Your conversations stay yours.</span></p>
+    <nav aria-label="법적 및 프로젝트 링크">
+      <a href="privacy.html" data-i18n="privacyLink">개인정보 안내</a>
+      <a href="LICENSE">MIT License</a>
+    </nav>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="src/extractor.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
