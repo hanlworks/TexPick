@@ -17,13 +17,20 @@
 
   const translations = {
     ko: {
-      eyebrow: "Private by design · No uploads",
-      heroTitle: "채팅의 군더더기는 지우고<br>메시지만 남기세요.",
-      heroDescription: "복사한 채팅에서 닉네임, 날짜, 이모티콘 반응, 메뉴 문구를 자동으로 제거합니다. 입력 내용은 서버로 전송되지 않습니다.",
-      privacyTitle: "브라우저 안에서만 처리",
+      eyebrow: "TEXTPICK / CHAT CLEANER",
+      heroTitle: "대화에서 본문만.",
+      heroDescription: "대화를 붙여 넣으면 닉네임, 시간, 반응 메뉴를 걷어내고 본문만 정리합니다.",
+      privacyTitle: "내 브라우저에서만 처리",
       privacyBody: "붙여 넣은 내용은 기기 밖으로 나가지 않으며 저장되지 않습니다.",
-      cleaningRules: "정리 규칙",
-      settingsTitle: "무엇을 지울까요?",
+      noAccount: "가입 없음",
+      theme: "테마",
+      options: "옵션",
+      closeOptions: "옵션 닫기",
+      done: "완료",
+      cleaningRules: "정리 설정",
+      settingsSummary: "기본 설정으로 대부분의 채팅을 정리할 수 있어요",
+      settingsOpen: "설정 열기",
+      settingsTitle: "정리 옵션",
       reset: "초기화",
       removeHeaders: "닉네임과 시간",
       removeHeadersHelp: "작성자, 날짜, 타임스탬프",
@@ -35,16 +42,15 @@
       removeMentionsHelp: "@사용자, 역할, 채널 멘션",
       normalizeSpacing: "공백 정리",
       normalizeSpacingHelp: "중복 빈 줄과 줄 끝 공백",
-      customRules: "사용자 지정 제거 문구",
+      customRules: "직접 지울 문구 추가",
       customRulesHelp: "한 줄에 하나씩 입력하세요. 정확히 일치하는 줄을 제거합니다.",
       customRulesPlaceholder: "예:\n읽지 않은 메시지\n스레드 보기",
       autoStatus: "붙여 넣으면 자동으로 정리됩니다",
-      trySample: "예시 사용",
       inputTitle: "채팅 붙여 넣기",
       clear: "비우기",
-      inputPlaceholder: "디스코드나 채팅 앱에서 복사한 내용을 여기에 붙여 넣으세요.",
+      inputPlaceholder: "다온 — 오전 10:24\n이번 주 모임은 토요일 오후가 어때?\n답장\n반응 추가하기\n\n해솔 — 오전 10:26\n나는 좋아. 장소만 정하면 될 것 같아.\n\n민우 — 오전 10:27\n역 앞 카페는 사람이 많으니까 공원 쪽은 어때?\n수정\n전달\n기타\n\n다온 — 오전 10:29\n좋아, 그럼 공원 입구에서 두 시에 만나자.",
       outputTitle: "추출된 메시지",
-      outputPlaceholder: "정리된 메시지가 여기에 표시됩니다.",
+      outputPlaceholder: "이번 주 모임은 토요일 오후가 어때?\n\n나는 좋아. 장소만 정하면 될 것 같아.\n\n역 앞 카페는 사람이 많으니까 공원 쪽은 어때?\n\n좋아, 그럼 공원 입구에서 두 시에 만나자.",
       download: "TXT 다운로드",
       copy: "결과 복사",
       removedLines: "개 불필요한 줄 제거",
@@ -65,13 +71,20 @@
       characters: "자"
     },
     en: {
-      eyebrow: "Private by design · No uploads",
-      heroTitle: "Remove the clutter.<br>Keep the messages.",
-      heroDescription: "Automatically strip usernames, timestamps, emoji reactions, and interface labels from copied chats. Your text never leaves your browser.",
-      privacyTitle: "Processed only in your browser",
+      eyebrow: "TEXTPICK / CHAT CLEANER",
+      heroTitle: "Just the message.",
+      heroDescription: "Paste a conversation and remove names, timestamps, reactions, and interface labels.",
+      privacyTitle: "Runs only in your browser",
       privacyBody: "Pasted text never leaves your device and is never stored.",
-      cleaningRules: "Cleaning rules",
-      settingsTitle: "What should be removed?",
+      noAccount: "No account",
+      theme: "Theme",
+      options: "Options",
+      closeOptions: "Close options",
+      done: "Done",
+      cleaningRules: "Cleanup settings",
+      settingsSummary: "The defaults work for most copied chats",
+      settingsOpen: "Open settings",
+      settingsTitle: "Cleanup options",
       reset: "Reset",
       removeHeaders: "Names and timestamps",
       removeHeadersHelp: "Authors, dates, and time labels",
@@ -83,16 +96,15 @@
       removeMentionsHelp: "User, role, and channel mentions",
       normalizeSpacing: "Clean spacing",
       normalizeSpacingHelp: "Duplicate blank lines and trailing spaces",
-      customRules: "Custom removal phrases",
+      customRules: "Add phrases to remove",
       customRulesHelp: "Enter one exact line per row.",
       customRulesPlaceholder: "Example:\nUnread messages\nView thread",
       autoStatus: "Your chat is cleaned automatically as you paste",
-      trySample: "Try sample",
       inputTitle: "Paste chat",
       clear: "Clear",
-      inputPlaceholder: "Paste content copied from Discord or another chat app.",
+      inputPlaceholder: "Robin — Today at 10:24 AM\nHow does Saturday afternoon sound for this week's meetup?\nReply\nAdd Reaction\n\nMorgan — Today at 10:26 AM\nWorks for me. We just need to choose a place.\n\nMin — Today at 10:27 AM\nThe cafe by the station gets crowded. How about the park?\nEdit\nForward\nMore\n\nRobin — Today at 10:29 AM\nPerfect. Let's meet by the park entrance at two.",
       outputTitle: "Extracted messages",
-      outputPlaceholder: "Clean messages will appear here.",
+      outputPlaceholder: "How does Saturday afternoon sound for this week's meetup?\n\nWorks for me. We just need to choose a place.\n\nThe cafe by the station gets crowded. How about the park?\n\nPerfect. Let's meet by the park entrance at two.",
       download: "Download TXT",
       copy: "Copy result",
       removedLines: "unnecessary lines removed",
@@ -195,11 +207,24 @@ Message #general`
     document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
       element.placeholder = t(element.dataset.i18nPlaceholder);
     });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+    });
     $("#languageButton").textContent = language === "ko" ? "EN" : "한국어";
     document.title = language === "ko"
       ? "TexPick — 채팅 본문 추출기"
       : "TexPick — Extract clean messages from chats";
+    updateThemeControl();
     render();
+  }
+
+  function updateThemeControl() {
+    const isLight = document.documentElement.dataset.theme === "light";
+    const label = language === "ko"
+      ? (isLight ? "어두운 테마로 변경" : "밝은 테마로 변경")
+      : (isLight ? "Switch to dark theme" : "Switch to light theme");
+    $("#themeButton").setAttribute("aria-label", label);
+    $("#themeButton").setAttribute("title", label);
   }
 
   async function copyOutput() {
@@ -236,6 +261,12 @@ Message #general`
   }
 
   inputText.addEventListener("input", render);
+  inputText.addEventListener("focus", () => {
+    document.body.classList.add("examples-hidden");
+  });
+  inputText.addEventListener("blur", () => {
+    if (!inputText.value) document.body.classList.remove("examples-hidden");
+  });
   $("#customRulesInput").addEventListener("input", render);
   settingIds.forEach((id) => $(`#${id}`).addEventListener("change", render));
   copyButton.addEventListener("click", copyOutput);
@@ -245,12 +276,14 @@ Message #general`
     render();
     inputText.focus();
   });
-  $("#sampleButton").addEventListener("click", () => {
-    inputText.value = samples[language];
-    render();
-    showToast(t("sampleLoaded"));
-  });
   $("#resetSettingsButton").addEventListener("click", resetSettings);
+  const optionsDialog = $("#optionsDialog");
+  $("#optionsButton").addEventListener("click", () => optionsDialog.showModal());
+  $("#closeOptionsButton").addEventListener("click", () => optionsDialog.close());
+  $("#doneOptionsButton").addEventListener("click", () => optionsDialog.close());
+  optionsDialog.addEventListener("click", (event) => {
+    if (event.target === optionsDialog) optionsDialog.close();
+  });
   $("#languageButton").addEventListener("click", () => {
     language = language === "ko" ? "en" : "ko";
     localStorage.setItem("texPickLanguage", language);
@@ -260,12 +293,12 @@ Message #general`
     const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
     localStorage.setItem("texPickTheme", nextTheme);
+    updateThemeControl();
   });
 
   const savedTheme = localStorage.getItem("texPickTheme")
     || localStorage.getItem("chatExtractorTheme");
-  if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+  document.documentElement.dataset.theme = savedTheme || "light";
   $("#year").textContent = new Date().getFullYear();
   applyLanguage();
-  inputText.focus();
 })();

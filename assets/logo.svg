@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
   <title id="title">TexPick</title>
-  <defs>
-    <linearGradient id="g" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#9B8CFF"/>
-      <stop offset="1" stop-color="#6254E8"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="#171D27"/>
-  <path d="M15 18.5A6.5 6.5 0 0 1 21.5 12h21a6.5 6.5 0 0 1 6.5 6.5v16a6.5 6.5 0 0 1-6.5 6.5H30l-10.5 9v-9a6.5 6.5 0 0 1-4.5-6.2V18.5Z" fill="url(#g)"/>
-  <path d="M24 23h16M24 30h11" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-  <path d="m38 39 4 4 8-9" fill="none" stroke="#6FF0B7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5 8h15M5 14h12M5 20h9" fill="none" stroke="#202226" stroke-width="2.25" stroke-linecap="round"/>
+  <path d="m16.5 16.5 9.5 4.2-4.1 1.5-1.6 4.1-3.8-9.8Z" fill="#fff" stroke="#202226" stroke-width="1.8" stroke-linejoin="round"/>
 </svg>

@@ -7,6 +7,7 @@ const files = [
   "index.html",
   "privacy.html",
   "styles.css",
+  "redesign.css",
   "manifest.webmanifest",
   "LICENSE"
 ];
