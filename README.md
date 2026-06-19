@@ -50,6 +50,11 @@ python -m http.server 8080
 
 Then open `http://localhost:8080`.
 
+## Deployment
+
+The production site is deployed to Cloudflare Workers from the `main` branch.
+Cloudflare runs `npm run build` and publishes only the generated `dist` directory.
+
 ## Tests
 
 The extraction engine is tested with Node's built-in test runner:

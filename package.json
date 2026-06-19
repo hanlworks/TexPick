@@ -4,6 +4,7 @@
   "private": true,
   "description": "Extract clean message text from copied chats without uploading private conversations.",
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "node --test",
     "serve": "npx serve ."
   },
