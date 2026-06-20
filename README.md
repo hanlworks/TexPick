@@ -2,6 +2,10 @@
 
 > Pick the text. Leave the clutter.
 
+[![Test](https://github.com/hanlworks/TexPick/actions/workflows/test.yml/badge.svg)](https://github.com/hanlworks/TexPick/actions/workflows/test.yml)
+[![MIT License](https://img.shields.io/badge/license-MIT-1b4572.svg)](LICENSE)
+[![Live demo](https://img.shields.io/badge/live-demo-1b4572.svg)](https://texpick.chattools.workers.dev)
+
 Remove usernames, timestamps, reactions, and interface labels from copied chats—without uploading private conversations.
 
 [한국어 문서](docs/README.ko.md) · [Live demo](https://texpick.chattools.workers.dev)
@@ -52,8 +56,7 @@ Then open `http://localhost:8080`.
 
 ## Deployment
 
-The production site is deployed to Cloudflare Workers from the `main` branch.
-Cloudflare runs `npm run build` and publishes only the generated `dist` directory.
+The production site is deployed to Cloudflare Workers from the `main` branch. Cloudflare runs `npm run build` and publishes only the generated `dist` directory.
 
 ## Tests
 
@@ -73,12 +76,15 @@ No package installation is required for the tests.
 │   └── logo.svg
 ├── docs/
 │   └── README.ko.md
+├── scripts/
+│   └── build.js
 ├── src/
 │   ├── app.js
 │   └── extractor.js
 ├── tests/
 │   └── extractor.test.js
 ├── index.html
+├── redesign.css
 └── styles.css
 ```
 
@@ -86,11 +92,28 @@ No package installation is required for the tests.
 
 The current parser focuses on copied Discord conversations in Korean and English, including compact timestamp formats produced by selecting messages in the desktop client.
 
+| Source | Language | Status |
+| --- | --- | --- |
+| Discord desktop copied messages | Korean | Tested |
+| Discord desktop copied messages | English | Tested |
+| Discord web copied messages | Korean / English | Partially tested |
+| Other chat platforms | — | Experimental |
+
 Other chat platforms may partially work. Contributions with anonymized copy-format samples are welcome.
+
+## Project story
+
+TexPick began with a small, concrete problem: copied Discord conversations contained more interface text than actual conversation. The project was designed, implemented, tested, and published through an iterative collaboration between a first-time open-source maintainer and OpenAI Codex.
+
+The goal is intentionally narrow: solve one repetitive task well, keep private text on the user's device, and make every extraction rule inspectable and testable.
+
+See [PROJECT_STORY.md](docs/PROJECT_STORY.md) for the development story and decisions behind the project.
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Please anonymize chat samples before opening an issue or pull request.
+
+For informal user testing, see the [feedback checklist](docs/USER_TESTING.md).
 
 ## Roadmap
 

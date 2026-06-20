@@ -2,6 +2,10 @@
 
 > 필요한 글만 고르고, 군더더기는 남기지 마세요.
 
+[![테스트](https://github.com/hanlworks/TexPick/actions/workflows/test.yml/badge.svg)](https://github.com/hanlworks/TexPick/actions/workflows/test.yml)
+[![MIT 라이선스](https://img.shields.io/badge/license-MIT-1b4572.svg)](../LICENSE)
+[![서비스](https://img.shields.io/badge/live-demo-1b4572.svg)](https://texpick.chattools.workers.dev)
+
 복사한 채팅에서 닉네임, 시간, 반응 메뉴 같은 부가 정보를 제거하고 메시지 본문만 추출하는 개인정보 보호형 웹 도구입니다.
 
 [실행 중인 서비스](https://texpick.chattools.workers.dev) · [영문 README](../README.md)
@@ -58,9 +62,28 @@ npm test
 
 테스트 실행에 별도 패키지 설치가 필요하지 않습니다.
 
+## 지원 범위
+
+| 복사 출처 | 언어 | 상태 |
+| --- | --- | --- |
+| 디스코드 데스크톱 복사 메시지 | 한국어 | 테스트 완료 |
+| 디스코드 데스크톱 복사 메시지 | 영어 | 테스트 완료 |
+| 디스코드 웹 복사 메시지 | 한국어 / 영어 | 일부 테스트 |
+| 다른 채팅 플랫폼 | — | 실험적 지원 |
+
+## 프로젝트 이야기
+
+TexPick은 디스코드 대화를 복사하면 실제 대화보다 인터페이스 문구가 더 많이 따라오는 작은 불편에서 시작했습니다. 오픈소스 프로젝트를 처음 운영하는 제작자와 OpenAI Codex가 화면 설계, 구현, 테스트, 배포를 반복하며 함께 만들었습니다.
+
+목표는 의도적으로 좁습니다. 반복 작업 하나를 잘 해결하고, 개인 대화를 사용자의 기기 안에 남겨두며, 모든 추출 규칙을 누구나 확인하고 테스트할 수 있게 만드는 것입니다.
+
+자세한 제작 과정은 [PROJECT_STORY.md](PROJECT_STORY.md)에서 확인할 수 있습니다.
+
 ## 기여하기
 
 [CONTRIBUTING.md](../CONTRIBUTING.md)를 확인해 주세요. 오류 사례를 제보할 때는 닉네임과 대화 내용을 반드시 익명화해 주세요.
+
+친구나 동료와 간단히 테스트할 때는 [사용자 테스트 안내](USER_TESTING.md)를 활용할 수 있습니다.
 
 ## 개발 계획
 
