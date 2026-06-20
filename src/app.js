@@ -18,8 +18,8 @@
   const translations = {
     ko: {
       eyebrow: "TEXTPICK / CHAT CLEANER",
-      heroTitle: "대화에서 본문만.",
-      heroDescription: "대화를 붙여 넣으면 닉네임, 시간, 반응 메뉴를 걷어내고 본문만 정리합니다.",
+      heroTitle: '<span class="hero-product">디스코드</span> 대화에서 본문만.',
+      heroDescription: "디스코드에서 복사한 대화를 붙여 넣으면 닉네임, 시간, 반응 메뉴를 지우고 본문만 남깁니다.",
       privacyTitle: "내 브라우저에서만 처리",
       privacyBody: "붙여 넣은 내용은 기기 밖으로 나가지 않으며 저장되지 않습니다.",
       noAccount: "가입 없음",
@@ -73,8 +73,8 @@
     },
     en: {
       eyebrow: "TEXTPICK / CHAT CLEANER",
-      heroTitle: "Just the message.",
-      heroDescription: "Paste a conversation and remove names, timestamps, reactions, and interface labels.",
+      heroTitle: '<span class="hero-product">Discord</span> messages, minus the clutter.',
+      heroDescription: "Paste a conversation copied from Discord and remove names, timestamps, reactions, and interface labels.",
       privacyTitle: "Runs only in your browser",
       privacyBody: "Pasted text never leaves your device and is never stored.",
       noAccount: "No account",

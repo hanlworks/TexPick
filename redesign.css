@@ -137,6 +137,10 @@ main {
   white-space: nowrap;
 }
 
+.hero-product {
+  color: #1b4572;
+}
+
 .hero-description {
   max-width: 620px;
   margin-top: 12px;
